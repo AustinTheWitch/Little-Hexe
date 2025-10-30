@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr4tfax73suya"]
+
+[ext_resource type="PackedScene" uid="uid://d6awf4f62qxi" path="res://character/base/character_base.tscn" id="1_rkbax"]
+[ext_resource type="Script" uid="uid://dty5xtly2v6qd" path="res://character/player/player.gd" id="2_g1dw6"]
+[ext_resource type="Script" uid="uid://h24bgddqdme8" path="res://character/player/states/idle.gd" id="3_gtsfv"]
+[ext_resource type="Script" uid="uid://xqq1pt4u5mwd" path="res://character/player/move.gd" id="4_wu8e1"]
+[ext_resource type="Script" uid="uid://bn5pkdqywqm8d" path="res://character/player/player_alchemy.gd" id="5_g20gq"]
+[ext_resource type="PackedScene" uid="uid://cse0krj4oodf6" path="res://inventory.tscn" id="6_eu8pa"]
+
+[node name="player" instance=ExtResource("1_rkbax")]
+script = ExtResource("2_g1dw6")
+
+[node name="Camera2D" type="Camera2D" parent="." index="0"]
+metadata/_edit_lock_ = true
+
+[node name="Sprite2D" parent="." index="1"]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="." index="2"]
+metadata/_edit_lock_ = true
+
+[node name="idle" type="Node" parent="state machine" index="0" node_paths=PackedStringArray("character")]
+script = ExtResource("3_gtsfv")
+character = NodePath("../..")
+
+[node name="move" type="Node" parent="state machine" index="1" node_paths=PackedStringArray("character")]
+script = ExtResource("4_wu8e1")
+character = NodePath("../..")
+
+[node name="alchemy" type="Node" parent="state machine" index="2"]
+script = ExtResource("5_g20gq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="4"]
+
+[node name="inventory" parent="CanvasLayer" index="0" instance=ExtResource("6_eu8pa")]
+anchors_preset = -1
+anchor_left = 0.651042
+anchor_top = 0.0432099
+anchor_right = 0.975694
+anchor_bottom = 0.49537
+grow_vertical = 1

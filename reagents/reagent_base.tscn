@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://p6m4de4du4is"]
+
+[ext_resource type="Script" uid="uid://b8q4pynk4niyt" path="res://reagents/reagent.gd" id="1_1omsl"]
+
+[node name="reagent" type="Node2D"]
+script = ExtResource("1_1omsl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]

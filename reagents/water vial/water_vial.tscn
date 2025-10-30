@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://3dfvw6hdkj04"]
+
+[ext_resource type="PackedScene" uid="uid://p6m4de4du4is" path="res://reagents/reagent_base.tscn" id="1_rflxo"]
+[ext_resource type="Script" uid="uid://imftyu2qiyjh" path="res://reagents/water vial/water_vial.gd" id="2_mhtmp"]
+
+[node name="water vial" instance=ExtResource("1_rflxo")]
+script = ExtResource("2_mhtmp")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://y7i72f26al15"]
+
+[ext_resource type="PackedScene" uid="uid://p6m4de4du4is" path="res://reagents/reagent_base.tscn" id="1_8lkpb"]
+[ext_resource type="Script" uid="uid://dkcuwtpw4qr6r" path="res://reagents/tea leaves/teav_leaves.gd" id="2_fjirm"]
+
+[node name="reagent" instance=ExtResource("1_8lkpb")]
+script = ExtResource("2_fjirm")
