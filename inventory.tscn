@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://mfhmmmniq1xu" path="res://inventory.gd" id="1_pohso"]
 [ext_resource type="Texture2D" uid="uid://bbtdyqqcffuet" path="res://icon.svg" id="2_5tt2m"]
-[ext_resource type="Script" uid="uid://vbcc7h42ygv0" path="res://inventory_object.gd" id="3_mrqgh"]
+[ext_resource type="Script" uid="uid://vbcc7h42ygv0" path="res://UI_object.gd" id="3_mrqgh"]
 
 [node name="inventory" type="Control"]
 layout_mode = 3

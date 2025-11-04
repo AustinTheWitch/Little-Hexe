@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyulmye8ii3e4"]
+
+[ext_resource type="PackedScene" uid="uid://drepflflk8wm8" path="res://UI_object.tscn" id="1_ahwas"]
+[ext_resource type="Script" uid="uid://cpopnf1wv6psg" path="res://ui_reagent.gd" id="2_lp7x3"]
+
+[node name="selected_reagents" instance=ExtResource("1_ahwas")]
+script = ExtResource("2_lp7x3")
