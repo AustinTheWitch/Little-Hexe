@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://c854axavb1njt"]
+[gd_scene load_steps=6 format=3 uid="uid://c854axavb1njt"]
 
 [ext_resource type="PackedScene" uid="uid://dr4tfax73suya" path="res://character/player/player.tscn" id="1_37kl0"]
+[ext_resource type="Script" uid="uid://8f08nnauhmt7" path="res://alchemy.gd" id="2_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://clxvyk2v1qpv2" path="res://reagents/phoenix feather/phoenix feather.tscn" id="3_ykrsh"]
+[ext_resource type="PackedScene" uid="uid://3dfvw6hdkj04" path="res://reagents/water vial/water_vial.tscn" id="4_g14j6"]
+[ext_resource type="PackedScene" uid="uid://y7i72f26al15" path="res://reagents/tea leaves/tea_leaves.tscn" id="5_vbegm"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("1_37kl0")]
 position = Vector2(91, 60)
+
+[node name="Node" type="Node" parent="." node_paths=PackedStringArray("base_reagent", "mixing_reagent", "primary_reagent")]
+script = ExtResource("2_8uh7m")
+base_reagent = NodePath("../water vial")
+mixing_reagent = NodePath("../phoenix feather")
+primary_reagent = NodePath("../tea_leaves")
+
+[node name="phoenix feather" parent="." instance=ExtResource("3_ykrsh")]
+
+[node name="water vial" parent="." instance=ExtResource("4_g14j6")]
+
+[node name="tea_leaves" parent="." instance=ExtResource("5_vbegm")]
