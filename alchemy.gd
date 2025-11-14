@@ -2,16 +2,17 @@ extends Node
 class_name alchemy_system
 
 #VALID POTION RECIPES WITH REAGENTS IN SPECIFIED ORDER AS [KEY] AND POTION IT CREATES AS [VALUE]
-const potions: Dictionary = {["water vial", "phoenix feather", "tea leaves"]: "Restoration Potion"}
-@onready var current_reagents: HBoxContainer = $"../selected_reagents"
+const potions: Dictionary = {["base", "mixing", "primary"]: "test potion"}
+@onready var reagent_slots: HBoxContainer = $reagent_slots
 
-static var base_reagent: selected_reagent
-static var mixing_reagent: selected_reagent
-static var primary_reagent: selected_reagent
+static var base_reagent: alchemy_slot
+static var mixing_reagent: alchemy_slot
+static var primary_reagent: alchemy_slot
+
 func _ready() -> void:
-	base_reagent = current_reagents.get_child(0)
-	mixing_reagent = current_reagents.get_child(1)
-	primary_reagent = current_reagents.get_child(2)
+	base_reagent = reagent_slots.get_child(0)
+	mixing_reagent = reagent_slots.get_child(1)
+	primary_reagent = reagent_slots.get_child(2)
 func potion_reagents(base, mixing, primary) -> Array:
 	var unknown_potion: Array
 	unknown_potion = [base, mixing, primary]
@@ -24,4 +25,4 @@ func potion_crafting(potion_crafted) -> void:
 	else: print("POTION CRAFTING FAILED")
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("ui_down"): 
-		potion_crafting(potion_reagents(base_reagent.sprite_name, mixing_reagent.sprite_name, primary_reagent.sprite_name))
+		potion_crafting(potion_reagents(base_reagent._name, mixing_reagent._name, primary_reagent._name))

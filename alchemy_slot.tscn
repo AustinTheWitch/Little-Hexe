@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://wnwte4codbsi"]
+
+[ext_resource type="Script" uid="uid://c4fc0cdbeed7i" path="res://alchemy_slot.gd" id="1_k06x1"]
+
+[node name="alchemy_slot" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k06x1")

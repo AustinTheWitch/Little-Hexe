@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://p6m4de4du4is"]
+
+[ext_resource type="Script" uid="uid://b8q4pynk4niyt" path="res://reagents/system base/reagent_base.gd" id="1_1omsl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edoty"]
+size = Vector2(128, 129)
+
+[node name="reagent" type="Node2D"]
+script = ExtResource("1_1omsl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_edoty")

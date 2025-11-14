@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="reagent_resource" load_steps=3 format=3 uid="uid://oenktn1myurn"]
+
+[ext_resource type="Texture2D" uid="uid://bbtdyqqcffuet" path="res://reagents/textures/icon.svg" id="1_uhbqw"]
+[ext_resource type="Script" uid="uid://c0ctu0cyms0m2" path="res://reagents/system base/reagent_resource.gd" id="1_vqbok"]
+
+[resource]
+script = ExtResource("1_vqbok")
+reagent_name = "mixing"
+reagent_texture = ExtResource("1_uhbqw")
+reagent_types = Array[String](["mixing"])
+metadata/_custom_type_script = "uid://c0ctu0cyms0m2"

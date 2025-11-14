@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="reagent_resource" load_steps=3 format=3 uid="uid://daorgel7nomq4"]
+
+[ext_resource type="Texture2D" uid="uid://bbtdyqqcffuet" path="res://reagents/textures/icon.svg" id="1_60ny5"]
+[ext_resource type="Script" uid="uid://c0ctu0cyms0m2" path="res://reagents/system base/reagent_resource.gd" id="2_nfug5"]
+
+[resource]
+script = ExtResource("2_nfug5")
+reagent_name = "base"
+reagent_texture = ExtResource("1_60ny5")
+reagent_types = Array[String](["base"])
+metadata/_custom_type_script = "uid://c0ctu0cyms0m2"

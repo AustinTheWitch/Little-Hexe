@@ -1,36 +1,42 @@
-[gd_scene load_steps=6 format=3 uid="uid://c854axavb1njt"]
+[gd_scene load_steps=7 format=3 uid="uid://c854axavb1njt"]
 
 [ext_resource type="PackedScene" uid="uid://dr4tfax73suya" path="res://character/player/player.tscn" id="1_37kl0"]
-[ext_resource type="PackedScene" uid="uid://h3qbjefa8vxh" path="res://alchemy_ui.tscn" id="1_ppyta"]
-[ext_resource type="PackedScene" uid="uid://clxvyk2v1qpv2" path="res://reagents/phoenix feather/phoenix feather.tscn" id="3_ykrsh"]
-[ext_resource type="PackedScene" uid="uid://3dfvw6hdkj04" path="res://reagents/water vial/water_vial.tscn" id="4_g14j6"]
-[ext_resource type="PackedScene" uid="uid://y7i72f26al15" path="res://reagents/tea leaves/tea_leaves.tscn" id="5_vbegm"]
+[ext_resource type="PackedScene" uid="uid://bc7ct8trfm712" path="res://user interface/base/user_interface.tscn" id="2_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://p6m4de4du4is" path="res://reagents/system base/reagent_base.tscn" id="2_ykrsh"]
+[ext_resource type="Resource" uid="uid://daorgel7nomq4" path="res://reagents/base.tres" id="3_g14j6"]
+[ext_resource type="Resource" uid="uid://oenktn1myurn" path="res://reagents/mixing.tres" id="4_vbegm"]
+[ext_resource type="Resource" uid="uid://cypvs6748osq5" path="res://reagents/primary.tres" id="5_g14j6"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="player" parent="." instance=ExtResource("1_37kl0")]
-position = Vector2(571, 325)
+[node name="reagent_list" type="Node" parent="."]
 
-[node name="water vial" parent="." instance=ExtResource("4_g14j6")]
-position = Vector2(-356, 0)
+[node name="base" parent="reagent_list" instance=ExtResource("2_ykrsh")]
+visible = false
+reagent_ref = ExtResource("3_g14j6")
 
-[node name="phoenix feather" parent="." instance=ExtResource("3_ykrsh")]
-position = Vector2(-275, -155)
+[node name="mixing" parent="reagent_list" instance=ExtResource("2_ykrsh")]
+visible = false
+reagent_ref = ExtResource("4_vbegm")
 
-[node name="tea_leaves" parent="." instance=ExtResource("5_vbegm")]
-position = Vector2(-173, 0)
+[node name="primary" parent="reagent_list" instance=ExtResource("2_ykrsh")]
+visible = false
+reagent_ref = ExtResource("5_g14j6")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="alchemy_ui" parent="CanvasLayer" instance=ExtResource("1_ppyta")]
+[node name="user interface" parent="CanvasLayer" instance=ExtResource("2_8uh7m")]
 
-[node name="base" parent="CanvasLayer/alchemy_ui/selected_reagents" index="0" node_paths=PackedStringArray("reagent")]
-reagent = NodePath("../../../../water vial")
+[node name="base" parent="CanvasLayer/user interface/alchemy/reagent_slots" index="0" node_paths=PackedStringArray("debug_test")]
+debug_test = NodePath("../../../../../reagent_list/base")
 
-[node name="mixing" parent="CanvasLayer/alchemy_ui/selected_reagents" index="1" node_paths=PackedStringArray("reagent")]
-reagent = NodePath("../../../../phoenix feather")
+[node name="mixing" parent="CanvasLayer/user interface/alchemy/reagent_slots" index="1" node_paths=PackedStringArray("debug_test")]
+debug_test = NodePath("../../../../../reagent_list/mixing")
 
-[node name="primary" parent="CanvasLayer/alchemy_ui/selected_reagents" index="2" node_paths=PackedStringArray("reagent")]
-reagent = NodePath("../../../../tea_leaves")
+[node name="primary" parent="CanvasLayer/user interface/alchemy/reagent_slots" index="2" node_paths=PackedStringArray("debug_test")]
+debug_test = NodePath("../../../../../reagent_list/primary")
 
-[editable path="CanvasLayer/alchemy_ui"]
+[node name="player" parent="." instance=ExtResource("1_37kl0")]
+
+[editable path="CanvasLayer/user interface"]
+[editable path="CanvasLayer/user interface/alchemy"]

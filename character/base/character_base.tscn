@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://d6awf4f62qxi"]
 
 [ext_resource type="Script" uid="uid://bsjdy3lvlmo2f" path="res://character/base/character_base.gd" id="1_e5sm8"]
-[ext_resource type="Texture2D" uid="uid://bbtdyqqcffuet" path="res://icon.svg" id="2_xnxxm"]
+[ext_resource type="Texture2D" uid="uid://bbtdyqqcffuet" path="res://reagents/textures/icon.svg" id="2_xnxxm"]
 [ext_resource type="Script" uid="uid://ue3j5riag4iq" path="res://character/character_state_machine.gd" id="3_rr2tv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y2b37"]
