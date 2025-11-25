@@ -1,0 +1,89 @@
+[gd_scene load_steps=3 format=3 uid="uid://cscw1ykf6w2d6"]
+
+[ext_resource type="PackedScene" uid="uid://wnwte4codbsi" path="res://item_space.tscn" id="1_pohso"]
+[ext_resource type="Script" uid="uid://dknix0t4pq1y6" path="res://inventory.gd" id="1_psafj"]
+
+[node name="inventory" type="Control"]
+layout_mode = 3
+anchor_left = 0.222222
+anchor_top = 0.765432
+anchor_right = 0.777778
+anchor_bottom = 0.938272
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_psafj")
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.642857
+anchor_right = 1.0
+anchor_bottom = 1.07143
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="row 1" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="item_space" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space2" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space3" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space4" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space5" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space6" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space7" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space8" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space9" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space10" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space11" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="item_space12" parent="VBoxContainer/row 1" instance=ExtResource("1_pohso")]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0

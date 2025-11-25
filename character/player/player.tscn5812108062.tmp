@@ -1,21 +1,24 @@
-[gd_scene load_steps=8 format=3 uid="uid://dr4tfax73suya"]
+[gd_scene load_steps=7 format=3 uid="uid://dr4tfax73suya"]
 
 [ext_resource type="PackedScene" uid="uid://d6awf4f62qxi" path="res://character/base/character_base.tscn" id="1_rkbax"]
 [ext_resource type="Script" uid="uid://dty5xtly2v6qd" path="res://character/player/player.gd" id="2_g1dw6"]
 [ext_resource type="Script" uid="uid://h24bgddqdme8" path="res://character/player/states/idle.gd" id="3_gtsfv"]
 [ext_resource type="Script" uid="uid://xqq1pt4u5mwd" path="res://character/player/states/move.gd" id="4_wu8e1"]
 [ext_resource type="Script" uid="uid://bn5pkdqywqm8d" path="res://character/player/states/alchemy.gd" id="5_g20gq"]
-[ext_resource type="Script" uid="uid://cp756eppafpe5" path="res://character/player/states/pickup.gd" id="6_eu8pa"]
-[ext_resource type="PackedScene" uid="uid://bc7ct8trfm712" path="res://user interface/base/user_interface.tscn" id="7_noxpy"]
+[ext_resource type="Script" uid="uid://cp756eppafpe5" path="res://character/player/pickup.gd" id="6_eu8pa"]
 
 [node name="player" instance=ExtResource("1_rkbax")]
-collision_mask = 3
 script = ExtResource("2_g1dw6")
 
 [node name="Camera2D" type="Camera2D" parent="." index="0"]
+metadata/_edit_lock_ = true
 
 [node name="Sprite2D" parent="." index="1"]
 scale = Vector2(0.520313, 0.535937)
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" parent="." index="2"]
+metadata/_edit_lock_ = true
 
 [node name="idle" type="Node" parent="state machine" index="0" node_paths=PackedStringArray("character")]
 script = ExtResource("3_gtsfv")
@@ -32,13 +35,3 @@ character = NodePath("../..")
 [node name="pickup" type="Node" parent="state machine" index="3"]
 script = ExtResource("6_eu8pa")
 metadata/_custom_type_script = "uid://rot7pnpxhcwr"
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="4"]
-
-[node name="user interface" parent="CanvasLayer" index="0" node_paths=PackedStringArray("player") instance=ExtResource("7_noxpy")]
-player = NodePath("../..")
-
-[node name="inventory" parent="CanvasLayer/user interface" index="0" node_paths=PackedStringArray("player")]
-player = NodePath("../../..")
-
-[editable path="CanvasLayer/user interface"]

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bc7ct8trfm712"]
 
 [ext_resource type="Script" uid="uid://copjkvjicuvsp" path="res://user interface/base/user_interface.gd" id="1_kxhmu"]
-[ext_resource type="PackedScene" uid="uid://brj3ansdawub" path="res://alchemy_ui.tscn" id="2_s81jq"]
+[ext_resource type="PackedScene" uid="uid://cscw1ykf6w2d6" path="res://inventory.tscn" id="2_s81jq"]
 
 [node name="user interface" type="Control"]
 layout_mode = 3
@@ -12,5 +12,5 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_kxhmu")
 
-[node name="alchemy" parent="." instance=ExtResource("2_s81jq")]
+[node name="inventory" parent="." instance=ExtResource("2_s81jq")]
 layout_mode = 1

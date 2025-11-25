@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://brj3ansdawub"]
 
-[ext_resource type="PackedScene" uid="uid://wnwte4codbsi" path="res://alchemy_slot.tscn" id="2_3b7m1"]
+[ext_resource type="PackedScene" uid="uid://wnwte4codbsi" path="res://item_space.tscn" id="2_3b7m1"]
 [ext_resource type="Script" uid="uid://8f08nnauhmt7" path="res://alchemy.gd" id="2_epx1v"]
 
 [node name="alchemy" type="Control"]
